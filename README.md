@@ -81,6 +81,16 @@ You have sucessfully submitted your Assignment. Kudos!!
 > **_Feel free to contact me @ [friskycodeur@gmail.com](mailto:friskycodeur@gmail.com?Subject=RegardingAssigmentSubmission)_**
 [![GitHub followers](https://img.shields.io/github/followers/friskycodeur.svg?label=Follow%20@friskycodeur&style=social)](https://github.com/friskycodeur/) [![Twitter Follow](https://img.shields.io/twitter/follow/moodyarrow?style=social)](https://twitter.com/moodyarrow) 
 
+
+## Mentors:
+
+| S.No. | Name               |GitHub Username :octocat:                             |
+| ----- | ------------------ |---------------------------------------------------- |
+| 1.    | Prateeek Maheshwari        | [@friskycodeur](https://github.com/friskycodeur)           |
+| 2.    | Shivam      | |
+| 3.    | Gaurav      | |
+
+
   <!-- Connect with me -->
 
   <h1> Let's Connect 😃</h1>
