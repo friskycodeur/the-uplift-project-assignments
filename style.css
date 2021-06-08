@@ -1,0 +1,143 @@
+
+
+  body {
+    margin: 0;
+    font-family: "Lucida Grande";
+  }
+
+  .container {
+    
+
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+  }
+
+  .fa {
+    margin-right: 5px;
+  }
+  
+  header {
+    height: 65px;
+    width: 100%;
+    background-color: rgba(34, 49, 52, 0.9);
+    position :fixed;
+    top: 0;
+    z-index: 10;
+  }
+  
+  .header-left {
+    float:left;
+    line-height: 65px;
+    padding: 1px 25px;
+    color: white;
+    display: block;
+    float: left;
+  }
+
+  .header-right {
+    float: right;
+    margin-right: 25px;
+  }
+
+  .header-right a {
+    line-height: 65px;
+    padding: 0 25px;
+    color: white;
+    display: block;
+    float: left;
+    transition: all 0.5s;
+    text-decoration: none;
+  }
+
+  
+
+  .header-right a:hover {
+    background-color: rgb(228, 240, 241);
+    color: orangered;
+  } 
+  
+  
+
+  .contact-form {            
+    padding-top:80px; 
+    background-size: cover;
+    padding-bottom: 30px;
+   }  
+
+   input {            
+    width: 1000px;            
+    margin-top: 10px;            
+    margin-bottom: 10px;            
+    padding: 20px;            
+    font-size: 18px;            
+    border: 1px solid #dee7ec;        
+   } 
+
+   textarea{
+    width: 1000px;   
+    height: 150px;         
+    margin-top: 10px;            
+    margin-bottom: 10px;            
+    padding: 20px;            
+    font-size: 18px;            
+    border: 1px solid #dee7ec;
+    
+   }
+
+   .section-title {
+    /*border: 2px solid #dee7ec; */
+    font-size: 40px;
+    margin-bottom: 50px;
+    color: rgba(243, 108, 59, 0.904);
+    display: inline;
+  }
+
+  .section-titles {
+    /*border: 2px solid #dee7ec; */
+    font-size: 40px;
+    margin-bottom: 50px;
+    display: inline;
+  }
+
+  .container p {
+    font-weight: bolder;
+    font-size: 25px;
+  }
+
+  .p-0{
+    margin-top: 50px;
+    color: rgba(47, 50, 51, 0.89);
+    font-size: 20p;
+  }
+
+.btn{
+  margin-left: 85px;
+}
+
+.bottom{
+  margin-left: 200px;
+}
+
+.b-1{
+  width: 320px;
+  background-color: rgb(199, 193, 193);
+  height: 250px; 
+  display: inline-flex;
+  
+}
+
+.b-1:hover{
+  background-color: salmon;
+}
+
+.bottom h1{
+  font-size: 30px;
+  
+  padding-left: 70px;
+  padding-top: 80px;
+  float: left;
+  
+}
+
+
