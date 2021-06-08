@@ -78,7 +78,8 @@ GitHub will alert you that you are able to merge the two branches because there 
 You have sucessfully submitted your Assignment. Kudos!!
 
 > **_Need help?_** 
-> **_Feel free to contact me @ [friskycodeur@gmail.com](mailto:friskycodeur@gmail.com?Subject=RegardingAssigmentSubmission)_**
+> **_Feel free to contact me @ [friskycodeur@gmail.com](mailto:friskycodeur@gmail.com?Subject=RegardingAssigmentSubmission)_**  
+
 [![GitHub followers](https://img.shields.io/github/followers/friskycodeur.svg?label=Follow%20@friskycodeur&style=social)](https://github.com/friskycodeur/) [![Twitter Follow](https://img.shields.io/twitter/follow/moodyarrow?style=social)](https://twitter.com/moodyarrow) 
 
 
@@ -87,8 +88,8 @@ You have sucessfully submitted your Assignment. Kudos!!
 | S.No. | Name               |GitHub Username :octocat:                             |
 | ----- | ------------------ |---------------------------------------------------- |
 | 1.    | Prateeek Maheshwari        | [@friskycodeur](https://github.com/friskycodeur)           |
-| 2.    | Shivam      | |
-| 3.    | Gaurav      | |
+| 2.    | Shivam      | [@the-Nightwing](https://github.com/the-Nightwing)
+| 3.    | Gaurav      | [@Gauravdarkslayer](https://github.com/Gauravdarkslayer)
 
 
   <!-- Connect with me -->
