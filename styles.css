@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;800&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    background: white;
+    color: black;
+    font-family: 'Montserrat';
+}
+
+.thin-wrapper {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background: #404040;
+  align-items: center;
+}
+
+.first-container {
+  background: #404040;
+  padding-left: 0px;
+  padding-right: 0px;
+  width: 60%;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  margin: auto;
+  height: 60px;
+}
+
+.navbar {
+  background: #404040;
+}
+
+.color-span {
+  background: #404040;
+  color: white;
+  display: flex;
+  height: 60px;
+  align-items: center;
+}
+
+.color-span-b {
+  background: #404040;
+  color: white;
+}
+
+#selected {
+  background: #505050;
+  color: #F4A460;
+  padding-left: 12px;
+}
+
+nav {
+  background: #404040;
+}
+
+ul {
+  background-color: inherit;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.second-container {
+  align-items: left;
+  background: white;
+  padding-left: 0px;
+  padding-right: 0px;
+  width: 60%;
+  margin: auto;
+  height: 450px;
+}
+
+h1 {
+  width: 100%;
+  height: 60px;
+  padding-top: 1.2em;
+  padding-bottom: 1em;
+  color: #F4A460;
+}
+
+.form-wrapper {
+  padding-top: 1.4em;
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 100%;
+  height : 400px;
+}
+
+
+.form-wrapper {
+  width: 100%;
+  background: white;
+  align-items: left;
+}
+
+.elements {
+  width: 100%;
+  background: white;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+input {
+   height: 30px;
+   border-color: white #999999 #999999 white;
+
+ }
+
+.submit {
+  background-color: #303030;
+  color: white;
+  height: 40px;
+  width: 80px;
+}
+
+.third-container {
+  background: white;
+  width: 60%;
+  margin: auto;
+  display: flex;
+  padding-top: 30px;
+
+}
+
+.sub-container-1 {
+  background: #F0F0F0;
+  height: 200px;
+  text-align: center;
+  flex:1;
+  padding-top: 45px;
+}
+
+.sub-container-2 {
+  background: #f8c9a0;
+  height: 200px;
+  flex:1;
+  text-align: center;
+  padding-top: 45px;
+
+}
+
+.sub-container-3 {
+    background: #F0F0F0;
+    height: 200px;
+    text-align: center;
+    flex:1;
+    padding-top: 45px;
+}
+
+#footer {
+   position:absolute;
+   bottom:0;
+   width:100%;
+   height:60px;
+   background: #404040;
+   text-align: center;
+   padding-top: 1.5em;
+   color: white;
+}
+
+.sub_b {
+  background-color: #F0F0F0;
+  color: black;
+}
+
+.sub_b_2 {
+  background-color: #f8c9a0;
+  color: black;
+}
+
+.circle {
+  border-radius: 100%;
+  padding: 0px;
+  border: 1px solid white;
+  background: #404040;
+  color: white;
+  text-align: center;
+}

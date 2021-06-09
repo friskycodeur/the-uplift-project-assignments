@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles.css">
+    <title>Demo Page</title>
+  </head>
+
+  <body>
+
+    <div class="thin-wrapper">
+      <div class="navbar">
+        <div class="first-container">
+          <span class="color-span"><b class="color-span-b">HBT</b></span>
+          <nav>
+            <ul>
+              <span class="color-span">Home</span>
+              <span class="color-span">About</span>
+              <span class="color-span" id="selected">Contact</span>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+
+    <div class="second-container">
+      <div class="header">
+        <h1>Contact<span> Us</span></h1>
+      </div>
+      <div class="form-wrapper">
+        Please fill out the form to contact us !
+        <form method="POST" action="#">
+          <div class="form-container">
+            <div class="elements">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="" />
+              <br />
+            </div>
+            <div class="elements">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="" />
+              <br />
+            </div>
+            <div class="elements">
+              <label for="message">Message</label>
+              <textarea id="message" rows="7"></textarea>
+              <br />
+            </div>
+          </div>
+          <input class="submit" type="submit" value="Submit" />
+          <br />
+        </form>
+      </div>
+    </div>
+
+    <div class="third-container">
+      <div class="sub-container-1">
+        <b class="sub_b">Location</b>
+        <br />
+        <br />
+        50 Main Street, Boston MS
+      </div>
+      <div class="sub-container-2">
+        <b class="sub_b_2">Phone Number</b>
+        <br />
+        <br />
+        (617) 555-5555
+      </div>
+      <div class="sub-container-3">
+        <b class="sub_b">Email Address</b>
+        <br />
+        <br />
+        fakemail@gmail.com
+      </div>
+    </div>
+
+    <div id="footer">
+      Hostel BT <span class="circle">c</span> 2020, All Rights Reserved
+    </div>
+
+  </body>
+</html>
