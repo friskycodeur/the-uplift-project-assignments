@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <title>Ankita_login_page</title>
+   <head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<style>
+  div{
+    padding-left: 200px;
+    padding-right: 200px;
+  }
+  .panel-footer {
+    background: black;
+    color: white;
+}
+.boxes{
+    align-items: center;
+    padding: 0 4rem;
+    display: flex;
+}
+.boxes .box{
+    display: flex;
+    flex-direction: column;
+    background: rgb(236, 200, 200);
+    height: 200px;
+    width: 200px;
+    /*justify-content: center;*/
+    align-items: center;
+}
+</style>
+  <body>
+    <nav class="navbar navbar-inverse">
+        <div class="container">
+            <div class="navbar-header">
+            <a href="#" class="navbar-brand"><b>HBT</b></a>
+        </div>
+            <div><ul class="nav navbar-nav navbar-right">
+                <li class="active"><a href="#">Home</a></li>
+                <li class="active"><a href="#">About</a></li>
+                <li class="active" ><a href="#" style= "color:rgb(250, 195, 127);">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+      </nav>
+      <div ><h1 style= "color:rgb(250, 195, 127);"><b>Contact Us</b></h1></div>
+      <div class="margin-left ">
+      <p>Please fill out this form to contact us!</p></div>
+      <div class="mb-3">
+        <label for="formGroupExampleInput" class="form-label">Name</label>
+        <input type="text" class="form-control" id="formGroupExampleInput">
+      </div>
+      <div class="mb-3">
+        <label for="formGroupExampleInput2" class="form-label">Email</label>
+        <input type="text" class="form-control" id="formGroupExampleInput2">
+      </div>
+      <div class="mb-1">
+        <label for="formGroupExampleInput2" class="form-label">Message</label>
+        <textarea class="form-control" id="formGroupExampleInput" rows="6"></textarea>
+      </div>
+      <div>
+      <button type="button" class="btn btn-primary">Submit</button>
+    </div>
+    </div>
+    <div class="boxes">
+            <div id="first" class="box" style="background: rgb(230, 230, 213);" >
+              <h1>Location</h1>
+              <p>50 Main Street,Townhall</p>
+            </div>
+            <div id="second" class="box" style="background: rgb(250, 195, 127);">
+              <h1>Phone Number</h1>
+              <p>0610-555-5555</p>
+            </div>
+            <div id="third" class="box" style="background: rgb(230, 230, 213);">
+              <h1>Email Address</h1>
+              <p>hbt@gmail.com</p>
+            </div>
+    </div>
+   <center><div class="panel-footer">Hotel BT @2020.All Rights Reserved.</div></center> 
+  
+  </body>
