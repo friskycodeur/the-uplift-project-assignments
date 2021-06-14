@@ -2,6 +2,51 @@
     padding: 0px;
     margin: 0px;
 }
+.head{
+    background-color: #333333;
+    color: white;
+    display: flex;
+    padding: 20px;
+    text-align: center;
+}
+.icon{
+    font-family: Verdana, Geneva, Tahoma, sans-serif ;
+    font-weight: 700;
+    margin-left: 20%;
+}
+.links{
+    margin-left: 40%;
+}
+#link{
+    font-family: monospace;
+    font-size: small;
+    padding-top: 10px ;
+}
+a{
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+}
+.forum{
+    text-align: left;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+#heading{
+    padding: 10px;
+    font-size: large;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+h1{
+    color: #f7c08a;
+}
+span{
+    color: black;
+}
+#para{
+    padding: 10px;
+    font-size: small;
+}
 .container-three{
     display: flex;
     margin-left: 20%;
@@ -29,10 +74,12 @@
 #container-three-heading{
     text-align: center;
     padding-top: 20px;
+    font-family: system-ui;
 }
 #container-three-data{
     text-align: center;
     padding-bottom: 20px;
+    font-family: monospace;
 }
 .foot{
     background-color: #444444;
@@ -41,4 +88,6 @@
 }
 #foot-content{
     padding: 20px;
+    font-size: smaller;
+    font-family: monospace;
 }
