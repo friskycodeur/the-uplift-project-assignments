@@ -1,0 +1,129 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+.head{
+    background-color: #333333;
+    color: white;
+    display: flex;
+    padding: 20px;
+    text-align: center;
+}
+.icon{
+    font-family: Verdana, Geneva, Tahoma, sans-serif ;
+    font-weight: 700;
+    margin-left: 20%;
+}
+.links{
+    margin-left: 40%;
+}
+#link{
+    font-family: monospace;
+    font-size: small;
+    padding-top: 10px ;
+}
+a{
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+}
+a:hover{
+    background-color: #5e5d5d;
+    color: #f7c08a
+}
+.forum{
+    text-align: left;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+#heading{
+    padding-top: 0px;
+    padding-left: 0px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    font-size: large;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+h1{
+    color: #f7c08a;
+    padding-top: 10px;
+}
+span{
+    color: black;
+}
+#para{
+    padding: 10px 10px 10px 0px;
+    font-size: small;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.data{
+    margin-bottom: 10px;
+}
+.div-blocks{
+    padding-top: 5px;
+    padding-left: 0px;
+    padding-bottom: 10px;
+    font-size: 16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+input[type="text"]{
+    padding:5px 10px;
+}
+input[type="email"]{
+    padding:5px 10px;
+}
+input[type="submit"]{
+    padding: 10px 10px 10px 10px;
+    background-color: black;
+    color: white;
+    border: 0px;
+}
+#inputs{
+    width: 100%;
+    color: grey;
+    box-sizing: border-box;
+}
+.container-three{
+    display: flex;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+.container-three-div1{
+    padding: 20px;
+    background-color: #f4f4f4;
+    width: 33.3%;
+    height:100px;
+    text-align: center;
+}
+.container-three-div2{
+    padding: 20px;
+    background-color: #f7c08a;
+    width: 33.3%;
+    height:100px;
+}
+.container-three-div3{
+    padding: 20px;
+    background-color: #f4f4f4;
+    width: 33.3%;
+    height:100px;
+}
+#container-three-heading{
+    text-align: center;
+    padding-top: 20px;
+    font-family: system-ui;
+}
+#container-three-data{
+    text-align: center;
+    padding-bottom: 20px;
+    font-family: monospace;
+}
+.foot{
+    background-color: #444444;
+    color:white;
+    text-align: center;
+}
+#foot-content{
+    padding: 20px;
+    font-size: smaller;
+    font-family: monospace;
+}
