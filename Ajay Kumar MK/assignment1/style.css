@@ -27,25 +27,61 @@ a{
     color: white;
     text-decoration: none;
 }
+a:hover{
+    background-color: #5e5d5d;
+    color: #f7c08a
+}
 .forum{
     text-align: left;
     margin-left: 20%;
     margin-right: 20%;
 }
 #heading{
-    padding: 10px;
+    padding-top: 0px;
+    padding-left: 0px;
+    padding-right: 10px;
+    padding-bottom: 10px;
     font-size: large;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 h1{
     color: #f7c08a;
+    padding-top: 10px;
 }
 span{
     color: black;
 }
 #para{
-    padding: 10px;
+    padding: 10px 10px 10px 0px;
     font-size: small;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.data{
+    margin-bottom: 10px;
+}
+.div-blocks{
+    padding-top: 5px;
+    padding-left: 0px;
+    padding-bottom: 10px;
+    font-size: 16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+input[type="text"]{
+    padding:5px 10px;
+}
+input[type="email"]{
+    padding:5px 10px;
+}
+input[type="submit"]{
+    padding: 10px 10px 10px 10px;
+    background-color: black;
+    color: white;
+    border: 0px;
+}
+#inputs{
+    width: 100%;
+    color: grey;
+    box-sizing: border-box;
 }
 .container-three{
     display: flex;
