@@ -1,0 +1,30 @@
+*{
+    margin:0;
+    padding:0;
+}
+.header{
+    height:100vh;
+}
+.navbar-style{
+    background-color: rgba(0, 0, 0, 0.473);
+    text-decoration-color: white;
+}
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    background: #353434;
+   text-align: center;
+   color: white;
+   padding: 18px 0; 
+  }
+  .row{
+    text-align: center;
+  }
+  .col-sm{ 
+      padding: 30px 30px 30px 10px;  
+  }
+  .active{
+      background-color: grey;
+}
