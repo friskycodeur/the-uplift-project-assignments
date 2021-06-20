@@ -1,0 +1,94 @@
+<html>
+    <head>
+        <title>Contact Us</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <style>
+            .nav-link:hover{
+                color:#ffc107 !important;
+                background-color: rgba(122, 122, 122, 0.788);
+            }
+            .card:hover{
+              background-color: #ffc107;
+            }
+            .card{
+              background-color: rgb(233, 230, 230);
+            }
+        </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark m-0 p-0">
+      <div class="container w-75">
+          <a class="navbar-brand" href="#"><b>HBT</b></a>
+          <ul class="navbar-nav ml-auto d-flex flex-row bd-highlight">
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#">Home</a>
+            </li>
+            <li cl ass="nav-item">
+              <a class="nav-link text-white" href="#">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#">Contact</a>
+            </li>
+          </ul>
+      </div>
+    </nav>
+     
+      <form class="container-sm w-75">
+        <h2>
+        <span class="text-warning">
+           Contact 
+        </span>
+        <span class="fs-2">
+        Us
+        </span>
+    </h2>
+        <p>Please fill out the form to contact us!</p>
+        <div class="mb-2">
+          <label for="exampleInputEmail1" class="form-label">Name</label>
+          <input type="text" class="form-control form-control-sm" id="exampleInputName1" aria-describedby="emailHelp">
+        </div>
+        <div class="mb-2">
+          <label for="exampleInputPassword1" class="form-label">Email</label>
+          <input type="email" class="form-control form-control-sm" id="exampleInputEmail1">
+        </div>
+        <div class="mb-2">
+            <label for="exampleInputEmail1" class="form-label">Message</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="2"></textarea>
+          </div>
+        <button type="submit" class="btn btn-dark text-white">Submit</button>
+      </form>
+      <div class="card-group container text-center w-75" style="height: 9rem;">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Location</h5>
+          </br>
+            <p class="card-text">50 Main Street, Boston MS</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Phone Number</h5>
+          </br>
+            <p class="card-text">(617) 555-5555</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Email Address</h5>
+          </br>
+            <p class="card-text">fakemail@gmail.com</p>
+          </div>
+        </div>
+      </div>
+      <nav>
+          <ul class="nav justify-content-center bg-dark text-white fixed-bottom p-3">
+              <li>Hotel BT &copy; 2020, All Rights Reserved</li>
+          </ul>
+      </nav>
+</body>
+</html>
