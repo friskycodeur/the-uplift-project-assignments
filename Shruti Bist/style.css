@@ -1,0 +1,63 @@
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+
+.header-heading h1
+{
+  position: relative;
+margin-left: 4%;
+  padding:3% 1%;
+  font-size: 36px;
+
+}
+
+.header-heading p
+{
+  position: relative;
+margin-left: 4%;
+padding-left: 1%;
+}
+
+.form-contact
+{
+  position: relative;
+margin-left: 4%;
+  padding:0% 1%;
+}
+
+
+
+.header-heading span
+{
+  color: orange;
+}
+
+.card-cd
+{
+  background-color: orange;
+}
+
+.card-group
+{
+
+
+position: relative;
+margin-left: 4%;
+padding:3% 1%;
+}
+
+
+
+.navbar-text
+{
+  display: inline-block;
+  margin-left: 0px;
+  padding: 0;
+
+}
