@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogs</title>
+</head>
+<body>
+    <h2>My Blogs Website</h2>
+    <a href="create"> Create New blog</a>
+    {% for blog in blogs %}
+        <div style="background-color:bisque"></div>
+           {{blog.title}}
+           {{blog.description}}
+        <a href="update/{{blog.id}}"> update this blog</a>
+        <a href="delete/{{blog.id}}"> delete this blog</a>
+        <button onclick="confirmDelete()"> click me </button>
+        </div>
+        <br>
+    {% endfor %}
+</body>
+
+<script>
+    function confirmDelete(){
+        let result = confirm("are you sure you want to delete?")
+        if(result)
+            return true;
+        else
+            return false;
+    }
+</script>
+</html>

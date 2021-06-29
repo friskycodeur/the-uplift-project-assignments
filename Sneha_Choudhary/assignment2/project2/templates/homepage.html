@@ -1,0 +1,25 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Contact Form</title>
+  <!--<link rel="stylesheet" href="{% static 'app1/images/signup.css' %}">-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+  <nav class="navbar navbar-light bg-light">
+    <span class="navbar-brand mb-0 h1">
+      <div class="text">
+        <img src="{% static 'app1/images/logo.jpg' %}" height="80px" width="80px">
+        BLOGS
+      </div>  
+    </span>
+  </nav>
+  <div class="container" align="center"> 
+  <h1><a href="{%url 'login' %}"><button type="button" class="btn btn-primary">Login</button></a></h1>
+  <h1><a href="{%url 'signup' %}"><button type="button" class="btn btn-primary">Signup</button></a></h1>
+  </div>   
+</body>
+</html>

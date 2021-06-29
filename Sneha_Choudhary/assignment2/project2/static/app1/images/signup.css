@@ -1,0 +1,21 @@
+
+body {
+    height: 100vh;
+    background-image:url("blog.jpg"),linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    background-size: cover;
+}
+
+.text
+{  font-family: "McLaren", cursive;
+    font-size: 80px;
+    margin:auto;
+}
+
+.container
+{ 
+  margin:auto;
+  width: 360px;
+  height: 700px;
+  padding:80px;
+  
+}
