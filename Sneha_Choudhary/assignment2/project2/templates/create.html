@@ -1,18 +1,35 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'app1/images/create.css' %}">
     <title>Create blog</title>
 </head>
 <body>
-    <h2>Create New Blog</h2>
-    <form method="POST" action="create">
-         {% csrf_token %}
-        <input type="text" name="title" >
-        <input type="text" name="description" >
-        <input type="submit">
-    </form>
+    <div class="nav">
+     <div align="right" class="text">
+         <img class="new" src="{% static 'app1/images/new.png' %}" height="50px" width="50px">  {{username}}
+     </div>
+    </div>
+    <h2 align="center">Create New Blog</h2>
+       <div class="create-box">
+        <form method="POST" action="create">
+          {% csrf_token %}
+          <label id="title">Title</label>  
+           <input type="text" name="title" >
+          <label id="description">Description</label> 
+          <textarea id="description" name="description" rows="8" cols="42"></textarea><br> 
+           <div align="center">
+              <button  class="subbutton">Submit</button>
+           </div>
+        </form>
+       </div>
+        <div class="image">
+        <img src="{% static 'app1/images/create.jpg' %}" height="280px" width="450px" alt="create blogs" title="create blogs">
+        </div>
 </body>
 </html>

@@ -7,21 +7,66 @@
     font-family: "Montserrat", sans-serif;
   }
   body {
-    background: #eee;
+    background-color: #ADD8E6;
     padding: 0 16px;
   }
   
+  .nav
+  { background-color:#ADD8E6;
+    height:80px;
+    width:100%;
+    align-items:center;
+    justify-content:center;
+    display:flex;
+  }
+
+  .topnav
+{
+  background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("images.jpg");
+  overflow:hidden;
+  padding: 5px;
+  height: 90px;
+}
+
+.log
+{ text-decoration: solid;
+  font-family: "Montserrat", sans-serif;
+  margin-right:20px;
+  padding: 2px;
+  display:flex;
+}
+
+.log:hover
+{ transform: scale(1.1);
+  text-decoration: underline;
+}
+
+.text
+{  font-family: "McLaren", cursive;
+    font-size: 30px;
+    color:#fff;
+    margin:4px;
+}
+
+.tab
+{ height:80px;
+  width:100%;
+}
+
   header {
-    background-color: blue;
+    background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("images.jpg");
+    background-size: cover;
     margin: auto -16px;
-    padding: 16px 32px;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+    display:flex;
   }
   
   header h1 {
     color: #fff;
     font-family: "McLaren", cursive;
     font-weight: 200;
+    font-size:100px;
+    padding-top:10px;
   }
   
   footer {
@@ -33,20 +78,21 @@
   }
   
   footer p {
-    color: #ccc;
+    color: black;
   }
   .note {
     background: #fff;
     border-radius: 7px;
     box-shadow: 0 2px 5px #ccc;
     padding: 10px;
-    width: 240px;
+    width: 340px;
     margin: 16px;
     float: left;
   }
   .note h1 {
     font-size: 1.1em;
     margin-bottom: 6px;
+    color:#1F51FF;
   }
   .note p {
     font-size: 1.1em;
@@ -54,3 +100,18 @@
     white-space: pre-wrap;
     word-wrap: break-word;
   }
+
+  .subbutton
+  {
+  padding:10px;
+  background-color: #ADD8E6;
+  border-radius:5px;
+  margin:15px;
+  font-size: 15px;
+  } 
+
+  .subbutton:hover
+  {  transform:scale(1.3);
+ 
+  } 
+

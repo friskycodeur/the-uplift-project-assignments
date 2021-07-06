@@ -6,8 +6,12 @@ urlpatterns=[
     path('login/',views.login,name="login"), # create
     path('signup/',views.signup,name="signup"), # create
     path('blogworld/', views.blogs,name='blogs'), # read
-    path('create',views.create_blog), # create
-    path('update/<int:id>',views.update_blog), # update
-    path('delete/<int:id>',views.delete_blog) # delete
+    path('dashboard/',views.dashboard,name='dashboard'),
+    path('dashboard/create',views.create_blog,name='create'), # create
+    path('blogworld/create/',views.create_blog,name='create'),
+    path('blogworld/create/create',views.create_blog,name='create'),
+    path('dashboard/update/<int:id>',views.update_blog), # update
+    path('dashboard/delete/<int:id>',views.delete_blog), # delete
+    path('blogworld/delete/<int:id>',views.delete_blog) # delete
    
 ]

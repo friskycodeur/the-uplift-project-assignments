@@ -1,79 +1,71 @@
 from django.shortcuts import render, redirect
 from . models import blog
-from .models import User
+from django.contrib.auth.models import User
+from django.contrib.auth import authenticate,login as authLogin
 # Create your views here.
 
 def login(request):
     if request.method == 'GET':
         return render(request,'signin.html')
     else:
-        print(request.POST)
-        """
-            LOGIN LOGIC
-                1. email exists or not
-                2. password is correct or not
-        """
-        userData = User.objects.filter(email = request.POST["email"],password=request.POST["password"])
-        if userData.exists():
-            print("user successfully logged in ")
-            print("userdata",userData[0])
-            context={"messages":f"welcome {userData[0].email}"}
-
-            return redirect("blogs")
+        # login LOGIC
+        username,_ =  request.POST["email"].split("@")
+        user = authenticate(request,username=username,password=request.POST["password"])
+        if user is not None:
+            authLogin(request,user)
+            context={"messages":f"Welcome sign in successfull {user}"}
+            print("sign in sucees")
+            # return render(request,'signin.html',context=context)
+            return redirect('blogs')
+            
         else:
-            print("invalid credentials")
             context={"messages":"invalid credentials"}
-            return render(request,'signin.html',context)
+            return render(request,'signin.html',context=context)
 
 
 def signup(request):
     if request.method == 'GET':
         return render(request,'signup.html')
     else:
-        """
-            MAIN SIGNUP LOGIC
-        """
-        print(request.POST)
-        """
-            select * from user where email = request.POST["email"];
-        """
-        if User.objects.filter(email = request.POST["email"]).exists():
-            context={"messages":"This email is already registered"}
-            return render(request,'signup.html',{"context":context})
+        """ signup logic """
+        username,_ =  request.POST["email"].split("@")
+        is_exist = User.objects.filter(username = username).exists()
+        if is_exist:
+            print("user already exist")
+            context={"messages":"user already exist"}
+
+            return render(request,'signin.html',context=context)
         else:
-            if len(request.POST["password"]) > 6:
-                print("ok password length is greator then 6")
-                """
-                    insert into User values(request.POST["email"],request.POST["password"])
-                """
-                User.objects.create(email = request.POST["email"],password=request.POST["password"])
-                print("user successfully created")
-                context={"messages":"user successfully created"}
+            myuser = User.objects.create_user(username=username,email = request.POST["email"],password=request.POST["password"])
+            print("myuser",myuser)
+            context={"messages":f"Welcome sign up successfull {myuser}"}
 
-                return render(request,'signup.html',context)
-
-            else:
-                print("password is not ok")
-                context={"messages":"password length is short"}
-                return render(request,'signup.html',{"messages":"password length is short"})
+            return render(request,'signup.html',context=context)
 
 def blogs(request):
-    if request.user.is_authenticated():
-        blogs=blog.objects.filter(user=request.user)
-    return render(request,'blog.html',{'blogs':blogs})
+    if request.user.is_authenticated:
+        print(request.user.username)
+    blogs=blog.objects.filter(curruser=request.user.username) 
+    context={"blogs" : blogs} 
+    for object in blogs:     
+        print(object.title)    
+    return render(request,"blog.html",{'blogs':blogs})   
+
+def dashboard(request):
+    return render(request,"blog.html")    
 
 def home(request):
     return render(request,'homepage.html')
 
 def create_blog(request):
     if request.method == 'GET':
-        return render(request,'create.html')
+        username=request.user.username
+        return render(request,'create.html',{'username':username})
     else:
         #### get the form data from user
         print(request.POST)
-        blog.objects.create(title=request.POST["title"],description=request.POST["description"])
+        blog.objects.create(curruser=request.user.username,title=request.POST["title"],description=request.POST["description"])
         return redirect('blogs')
-
 
 def update_blog(request,id):
     if request.method == 'GET':

@@ -4,22 +4,87 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title> Contact Form</title>
-  <!--<link rel="stylesheet" href="{% static 'app1/images/signup.css' %}">-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Blogs </title>
+  <link rel="icon" href="{% static 'app1/images/logo.jpg' %}">
+  <link rel="stylesheet" href="{% static 'app1/images/signup.css' %}">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body>
-  <nav class="navbar navbar-light bg-light">
-    <span class="navbar-brand mb-0 h1">
-      <div class="text">
+  <div class="topnav">
+      <div class="text" align="center" >
         <img src="{% static 'app1/images/logo.jpg' %}" height="80px" width="80px">
         BLOGS
       </div>  
-    </span>
-  </nav>
-  <div class="container" align="center"> 
-  <h1><a href="{%url 'login' %}"><button type="button" class="btn btn-primary">Login</button></a></h1>
-  <h1><a href="{%url 'signup' %}"><button type="button" class="btn btn-primary">Signup</button></a></h1>
-  </div>   
+  </div>
+
+<div class="banner">
+  <div class="login-box" align="center"> 
+    <h1 class="info">Already have an account ! Login </h1>
+    <h1><a href="{%url 'login' %}"><button type="button" class="subbutton">Login</button></a></h1>
+    <h1 class="info">Create an account</h1>
+    <h1><a href="{%url 'signup' %}"><button type="button" class="subbutton">Signup</button></a></h1>
+   </div> 
+</div>
+
+  <br> 
+  
+  <h1 align="center" class="under">FEATURES</h1>
+
+  <div class="container">
+    <div class="box">
+      <div class="imgBox">
+        <img src="{%  static 'app1/images/make.jpg' %}" />
+      </div>
+      <div class="content">
+        <div>
+          <h4>CREATE</h4>
+          <div class="rating">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star-o"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="box">
+      <div class="imgBox">
+        <img src="{%  static 'app1/images/update.jpg' %}" />
+      </div>
+      <div class="content">
+        <div>
+          <h4>UPDATE</h4>
+          <div class="rating">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star-half-o"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="box">
+      <div class="imgBox">
+        <img src="{%  static 'app1/images/delete.jpg' %}" />
+      </div>
+      <div class="content">
+        <div>
+          <h4>DELETE</h4>
+          <div class="rating">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star-o"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+   
 </body>
 </html>

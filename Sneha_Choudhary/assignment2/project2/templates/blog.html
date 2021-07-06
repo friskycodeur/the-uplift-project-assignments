@@ -1,31 +1,60 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'app1/images/styles.css' %}"> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <title>Blogs</title>
 </head>
 <body>
-    <h2>My Blogs Website</h2>
-    <a href="create"> Create New blog</a>
-    {% for blog in blogs %}
-        <div style="background-color:bisque"></div>
-           {{blog.title}}
-           {{blog.description}}
-        <a href="update/{{blog.id}}"> update this blog</a>
-        <a href="delete/{{blog.id}}"> delete this blog</a>
-        <button onclick="confirmDelete()"> click me </button>
+    <header>
+        <table class="tab">
+         <tr>
+         <td> 
+        <h1>BLOGS</h1>
+        </td>   
+        <td>
+         <div align="right" class="log">
+        <img  src="{% static 'app1/images/new.png' %}" height="50px" width="50px">
+        <div class="text"> {{request.user.username}}</div>
         </div>
-        <br>
-    {% endfor %}
+        </td>
+        </tr>
+        </table>
+
+    </header>
+    <h1 align="center"><a href="{%url 'create' %}"><button type="button" class="btn btn-primary">Create New Blog</button></a></h1>
+        {% for blog in blogs %}
+        <div class="note" >
+           <h1>{{ blog.title }}</h1>
+           <hr>
+           {{ blog.description }}
+           <hr>
+          <a href="update/{{blog.id}}"> Update this blog</a>
+          <hr>
+          <a onclick="confirmDelete()"> Delete this blog</a> 
+
+        <button class="subbutton" onclick="confirmDelete()" > Delete </button>
+       </div> 
+        {% endfor %} 
+        <br>  
+    <footer>
+        <p>Copyright @ 2021 </p>
+    </footer>
 </body>
 
 <script>
     function confirmDelete(){
         let result = confirm("are you sure you want to delete?")
         if(result)
-            return true;
+        { {% for blog in blogs %}
+            location.href="delete/{{blog.id}}";
+           {% endfor %}
+        }       
         else
             return false;
     }
