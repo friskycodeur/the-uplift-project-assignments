@@ -11,6 +11,7 @@ urlpatterns=[
     path('blogworld/create/',views.create_blog,name='create'),
     path('blogworld/create/create',views.create_blog,name='create'),
     path('dashboard/update/<int:id>',views.update_blog), # update
+    path('blogworld/update/<int:id>',views.update_blog,name='update'),
     path('dashboard/delete/<int:id>',views.delete_blog), # delete
     path('blogworld/delete/<int:id>',views.delete_blog) # delete
    

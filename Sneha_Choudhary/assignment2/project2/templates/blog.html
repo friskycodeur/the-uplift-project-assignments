@@ -30,15 +30,15 @@
     <h1 align="center"><a href="{%url 'create' %}"><button type="button" class="btn btn-primary">Create New Blog</button></a></h1>
         {% for blog in blogs %}
         <div class="note" >
-           <h1>{{ blog.title }}</h1>
+           <h1 align="center">{{ blog.title }}</h1>
            <hr>
            {{ blog.description }}
            <hr>
           <a href="update/{{blog.id}}"> Update this blog</a>
           <hr>
-          <a onclick="confirmDelete()"> Delete this blog</a> 
-
-        <button class="subbutton" onclick="confirmDelete()" > Delete </button>
+        <div align="center">
+        <button  class="subbutton" onclick="confirmDelete()" > Delete this blog </button>
+        </div>
        </div> 
         {% endfor %} 
         <br>  
@@ -49,7 +49,7 @@
 
 <script>
     function confirmDelete(){
-        let result = confirm("are you sure you want to delete?")
+        let result = confirm("are you sure you want to delete this blog ?")
         if(result)
         { {% for blog in blogs %}
             location.href="delete/{{blog.id}}";

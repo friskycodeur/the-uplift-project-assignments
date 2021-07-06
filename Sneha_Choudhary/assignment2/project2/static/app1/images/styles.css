@@ -103,11 +103,12 @@
 
   .subbutton
   {
-  padding:10px;
+  padding:5px;
   background-color: #ADD8E6;
   border-radius:5px;
-  margin:15px;
+  margin:auto;
   font-size: 15px;
+  font-family: "Montserrat", sans-serif;
   } 
 
   .subbutton:hover

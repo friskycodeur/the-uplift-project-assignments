@@ -13,7 +13,7 @@ def login(request):
         user = authenticate(request,username=username,password=request.POST["password"])
         if user is not None:
             authLogin(request,user)
-            context={"messages":f"Welcome sign in successfull {user}"}
+            context={"messages":f"Welcome {user} sign in successful"}
             print("sign in sucees")
             # return render(request,'signin.html',context=context)
             return redirect('blogs')
@@ -32,9 +32,9 @@ def signup(request):
         is_exist = User.objects.filter(username = username).exists()
         if is_exist:
             print("user already exist")
-            context={"messages":"user already exist"}
+            context={"messages":"User already exist.You may login"}
 
-            return render(request,'signin.html',context=context)
+            return render(request,'signup.html',context=context)
         else:
             myuser = User.objects.create_user(username=username,email = request.POST["email"],password=request.POST["password"])
             print("myuser",myuser)
@@ -69,8 +69,9 @@ def create_blog(request):
 
 def update_blog(request,id):
     if request.method == 'GET':
+        username=request.user.username
         blogs = blog.objects.get(id=id)
-        return render(request,'edit.html',{'blogs':blogs})
+        return render(request,'update.html',{'username':username,'blogs':blogs})
     else:
         blog.objects.filter(id=id).update(title=request.POST["title"],description=request.POST["description"])
         # blogs = blog.objects.all()
