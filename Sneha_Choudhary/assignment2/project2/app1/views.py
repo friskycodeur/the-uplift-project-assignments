@@ -38,7 +38,7 @@ def signup(request):
         else:
             myuser = User.objects.create_user(username=username,email = request.POST["email"],password=request.POST["password"])
             print("myuser",myuser)
-            context={"messages":f"Welcome sign up successfull {myuser}"}
+            context={"messages":f"Welcome  {myuser} ! Sign up is successful "}
 
             return render(request,'signup.html',context=context)
 
