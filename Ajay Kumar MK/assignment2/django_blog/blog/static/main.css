@@ -1,0 +1,41 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;  
+  }
+  .new-body{
+    padding: 20px;
+  }
+  .header {
+    padding: 10px;
+    font-size: 40px;
+    text-align: center;
+  }
+  
+  .leftcolumn {   
+    float: left;
+    width: 100%;
+  }
+  
+  .card {
+     background-color: white;
+     padding: 20px;
+     margin-top: 20px;
+  }
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  @media screen and (max-width: 800px) {
+    .leftcolumn, .rightcolumn {   
+      width: 100%;
+      padding: 0;
+    }
+  }
+  
+ 
