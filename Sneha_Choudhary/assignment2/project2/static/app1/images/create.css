@@ -10,6 +10,11 @@ table
 
 }
 
+#description
+{
+    white-space: pre-wrap;
+}
+
 .create-box{
     position:fixed;
     width:400px;

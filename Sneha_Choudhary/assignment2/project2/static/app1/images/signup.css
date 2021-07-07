@@ -79,6 +79,7 @@ footer {
 
 footer p {
   color: black;
+  text-decoration: solid;
 }
 
 .info

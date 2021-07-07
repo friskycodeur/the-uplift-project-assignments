@@ -38,7 +38,7 @@
 
 .log:hover
 { transform: scale(1.1);
-  text-decoration: underline;
+  text-decoration: underline white;
 }
 
 .text
@@ -53,13 +53,14 @@
   width:100%;
 }
 
-  header {
+header
+{
     background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("images.jpg");
     background-size: cover;
     margin: auto -16px;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
     display:flex;
-  }
+}
   
   header h1 {
     color: #fff;
@@ -70,7 +71,7 @@
   }
   
   footer {
-    position: absolute;
+    position: fixed;
     text-align: center;
     bottom: 0;
     width: 100%;
@@ -81,25 +82,71 @@
     color: black;
   }
   .note {
-    background: #fff;
+    background:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url("blogback.jpg");
+    background-size: cover;
     border-radius: 7px;
     box-shadow: 0 2px 5px #ccc;
-    padding: 10px;
-    width: 340px;
-    margin: 16px;
-    float: left;
+    width: 1000px;
+    margin-top: 80px;
+    margin-bottom: 80px;;
+    margin-right: auto;
+    margin-left:auto;
+    white-space :pre-wrap;
+    height:fit-content;
+    font-family: "McLaren", cursive;
   }
+
+.note:hover
+{
+  transform: scale(1.1);
+  background:linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),url("blogback.jpg");
+  box-shadow: 0 2px 5px black;
+}
+
   .note h1 {
-    font-size: 1.1em;
-    margin-bottom: 6px;
-    color:#1F51FF;
+    font-size: 50px;
+    color:black;
+    padding-top: 0px;
   }
   .note p {
     font-size: 1.1em;
-    margin-bottom: 10px;
     white-space: pre-wrap;
     word-wrap: break-word;
   }
+
+
+  .title
+  {
+    height:60px;
+    padding-top:0px;
+    margin-top:-86px;
+  }
+
+  .description
+  {
+    height:fit-content;
+    margin-top:-86px;
+    padding:10px;
+    margin-bottom:-86px;
+  }
+
+  .update
+  { margin-top:-83px;
+    height:90px;
+    margin-bottom:-86px;
+    color:black;
+  }
+
+  .black
+  {
+    color:black;
+  }
+
+ .delete
+ { margin-top:-70px;
+   height:90px;
+   margin-bottom:-60px;
+ }
 
   .subbutton
   {

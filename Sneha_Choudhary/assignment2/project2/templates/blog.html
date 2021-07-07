@@ -11,40 +11,45 @@
     <title>Blogs</title>
 </head>
 <body>
-    <header>
+<header>
         <table class="tab">
          <tr>
-         <td> 
-        <h1>BLOGS</h1>
-        </td>   
-        <td>
-         <div align="right" class="log">
-        <img  src="{% static 'app1/images/new.png' %}" height="50px" width="50px">
-        <div class="text"> {{request.user.username}}</div>
-        </div>
-        </td>
-        </tr>
+          <td> 
+           <h1>BLOGS</h1>
+          </td>   
+          <td>
+           <div align="right" class="log">
+           <img  src="{% static 'app1/images/new.png' %}" height="50px" width="50px">
+           <div class="text"> {{request.user.username}}</div>
+           </div>
+          </td>
+          </tr>
         </table>
-
-    </header>
+</header>
     <h1 align="center"><a href="{%url 'create' %}"><button type="button" class="btn btn-primary">Create New Blog</button></a></h1>
         {% for blog in blogs %}
         <div class="note" >
-           <h1 align="center">{{ blog.title }}</h1>
+            <div class="title">
+              <h1 align="center">{{ blog.title }}</h1>
+             </div>
+              <hr>
+             <div align="center" class="description">
+               {{ blog.description }}
+             </div>
            <hr>
-           {{ blog.description }}
+             <div align="center" class="update">
+               <a href="update/{{blog.id}}" class="black"> Update this blog</a>
+             </div>
            <hr>
-          <a href="update/{{blog.id}}"> Update this blog</a>
-          <hr>
-        <div align="center">
-        <button  class="subbutton" onclick="confirmDelete()" > Delete this blog </button>
-        </div>
-       </div> 
+            <div align="center" class="delete">
+            <button  class="subbutton" onclick="confirmDelete()" > Delete this blog </button>
+            </div>
+        </div> 
         {% endfor %} 
         <br>  
-    <footer>
-        <p>Copyright @ 2021 </p>
-    </footer>
+<footer>
+        <p>Copyright  2021 @{{request.user.username}}</p>
+</footer>
 </body>
 
 <script>
