@@ -19,14 +19,14 @@ def create(request):
 
 @login_required(login_url='/signin')
 def post(request, id):
-    blogs = blog.objects.get(id=id)
-    return render(request,'posts.html', {'blogs': blogs})
+    posts = blog.objects.get(id=id)
+    return render(request,'posts.html', {'posts': posts})
 
 @login_required(login_url='/signin')
 def update(request, id):
     if request.method == 'GET':
-        blogs = blog.objects.get(id=id)
-        return render(request,'edit.html',{'blogs': blogs})
+        posts = blog.objects.get(id=id)
+        return render(request,'edit.html',{'posts': posts})
     else:
         blog.objects.filter(id=id).update(title=request.POST["title"],content=request.POST["content"])
         return redirect('/blogs/')

@@ -10,4 +10,4 @@ class blog(models.Model):
     content = models.TextField()
     date_posted = models.DateTimeField(default=timezone.now)
 
-    user_id = models.ForeignKey(User,on_delete=models.CASCADE,null=True,blank=True)
+    user_id = models.ForeignKey(User,on_delete=models.CASCADE)
