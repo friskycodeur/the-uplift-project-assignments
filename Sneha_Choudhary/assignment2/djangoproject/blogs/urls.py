@@ -6,11 +6,9 @@ from django.contrib.auth.views import LoginView,LogoutView
 
 urlpatterns=[
     path('',views.home),
-    path('login/', auth_views.LoginView.as_view(template_name='signin.html'),name="login"), # create
-    path('signup/',views.register,name="signup"), # create
-    path('login/blogworld/', views.blogs,name='blogs'), # read
-    path('dashboard/',views.dashboard,name='dashboard'),
-    # path('dashboard/create',views.create_blog,name='create'), # create
+    path('login/', auth_views.LoginView.as_view(template_name='signin.html'),name="login"), 
+    path('signup/',views.register,name="signup"), 
+    path('login/blogworld/', views.blogs,name='blogs'), 
     path('blogworld/create/',views.create_blog,name='create'),
     path('blogworld/create/create',views.create_blog,name='create'),
     path('dashboard/update/<int:id>',views.update_blog), # update

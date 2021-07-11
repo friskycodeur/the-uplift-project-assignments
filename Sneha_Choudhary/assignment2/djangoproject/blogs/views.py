@@ -7,43 +7,6 @@ from django.contrib.auth import authenticate,login as authLogin
 from .forms import UserRegisterForm
 # Create your views here.
 
-def login(request):
-    if request.method == 'GET':
-        return render(request,'signin.html')
-    else:
-        # login LOGIC
-        username,_ =  request.POST["email"].split("@")
-        user = authenticate(request,username=username,password=request.POST["password"])
-        if user is not None:
-            authLogin(request,user)
-            context={"messages":f"Welcome {user} sign in successful"}
-            print("sign in sucees")
-            # return render(request,'signin.html',context=context)
-            return redirect('blogs')
-            
-        else:
-            context={"messages":"invalid credentials"}
-            return render(request,'signin.html',context=context)
-
-def signup(request):
-    if request.method == 'GET':
-        return render(request,'signup.html')
-    else:
-        """ signup logic """
-        username,_ =  request.POST["email"].split("@")
-        is_exist = User.objects.filter(username = username).exists()
-        if is_exist:
-            print("user already exist")
-            context={"messages":"User already exist.You may login"}
-
-            return render(request,'signup.html',context=context)
-        else:
-            myuser = User.objects.create_user(username=username,email = request.POST["email"],password=request.POST["password"])
-            print("myuser",myuser)
-            context={"messages":f"Welcome  {myuser} ! Sign up is successful "}
-
-            return render(request,'signin.html',context=context)
-
 def register(request):
     print("Hello1")
     if request.method == "POST":
