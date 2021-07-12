@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+  {% block title%}Home{% endblock %}
+  {% block content%}
+    <div class="new-body">
+        <div class="card" >
+          <div>
+            <a href="create/" class="btn btn-outline-primary">Create New Blog</a>
+            <a href="/signout" class="btn btn-outline-danger" style="float: right;">Logout</a>
+          </div>
+        </div>
+        
+        {% for blog in blogs %}
+          <div class="card">
+            <a style="text-decoration: none; color: black;" href="post/{{blog.id}}">  
+                <h3 class="card-title">{{ blog.title }}</h3>
+                <div class="card-body">
+                  <h5>{{ blog.date_posted }}</h5>
+                  <p class="card-text">{{ blog.content }}</p>    
+                </div>
+            </a>  
+          </div>
+        {% endfor %}
+    </div>
+  {% endblock content%}

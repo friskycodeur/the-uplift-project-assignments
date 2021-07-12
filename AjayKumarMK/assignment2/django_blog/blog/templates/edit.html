@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+  {% block title%}Update{% endblock %}
+  {% block content %}
+  <div class="new-body">
+    <div class="card" >
+        <div>
+            <a href="/blogs" class="btn btn-outline-primary">Cancel</a>
+            <a href="/signout" class="btn btn-outline-danger" style="float: right;">Logout</a>
+        </div>
+    </div>
+    <div class="card">
+        <form method="POST">
+            {% csrf_token %}
+            <label for=""><h3>Blog Title</h3></label><br>
+            <input type="text" name="title" value="{{posts.title}}" style="width: 100%;"><br><br>
+            <label for=""><h3>Blog Content</h3></label><br>
+            <textarea name="content" id="" cols="30" rows="10" style="width: 100%;">{{posts.content}}</textarea><br>
+            <button type="submit" class="btn btn-outline-warning">Submit</button>
+        </form>
+    </div>
+  </div>
+  {% endblock content %}

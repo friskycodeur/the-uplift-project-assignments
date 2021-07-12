@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+    {% block title%}Post{% endblock %}
+    {% block content %}
+    <div class="new-body">
+        <div class="card">
+            <div>
+                <a href="/blogs" class="btn btn-outline-primary">Back</a>
+                <a href="/signout" class="btn btn-outline-danger" style="float: right;">Logout</a>
+            </div>
+        </div>
+        <div class="card">
+            <h2 class="card-title">{{ posts.title }}</h2>
+            <div class="card-body">
+                <h4>{{posts.date_posted}}</h4>
+                <br>
+                <p class="card-text">{{posts.content}}</p>
+            </div>
+            <br><br>
+            <div>    
+                <a href="update/{{posts.id}}/" class="btn btn-outline-success">Update</a>
+                <a href="delete/{{posts.id}}" class="btn btn-outline-danger" onclick="confirmDelete()">Delete</a>
+            </div>
+        </div>
+    </div>
+<script>
+    function confirmDelete(){
+        let result = confirm("are you sure you want to delete?")
+        if(result)
+            return true;
+        else
+            return false;
+    }
+</script>
+{% endblock content%}

@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+  {% block title%}Create Blog{% endblock %}
+  {% block content %}
+  <div class="new-body">
+    <div class="card" >
+        <div>
+            <a href="/blogs" class="btn btn-outline-primary">Back</a>
+            <a href="/signout" class="btn btn-outline-danger" style="float: right;">Logout</a>
+        </div>
+    </div>
+    <div class="card">
+      <form method="POST">
+        {% csrf_token %}
+        <label for=""><h4>Blog Title</h4></label>
+        <input type="text" name="title" style="width: 100%;"><br>
+        <label for=""><h4>Blog content</h4></label><br>
+        <textarea name="content" id="" style="width: 100%;" cols="30" rows="10"></textarea><br>
+        <button type="submit" class="btn btn-outline-warning">Submit</button>
+      </form>
+    </div>
+  </div>
+  {% endblock content %}
