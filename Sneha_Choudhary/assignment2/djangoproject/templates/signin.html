@@ -1,0 +1,46 @@
+{% extends "homepage.html" %}
+
+{% load static %}
+
+{% block title %}
+    <link rel="stylesheet" href="{% static 'blogs/images/login1.css' %}">
+    <title>Blogs | Login</title>
+    <link rel="icon" href="{% static 'blog/images/logo.jpg' %}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+{% endblock %}
+
+{% block content %}
+<body>
+    <div class="alert alert-primary" role="alert">
+        {% if messages %}
+            {{messages}}
+    
+        {% endif %}
+    </div>
+
+    <!--   <div align="right">
+        <h1><a href="{%url 'signup' %}"><button type="button" class="subbutton">Signup</button></a></h1>
+        </div> -->
+
+    <div class="box">
+    <div class="login-box">
+    <form method="POST" >
+        {% csrf_token %}
+       {{form}}
+       <div align="center">
+        <button  class="subbutton">Submit</button>
+    </div> 
+    </form>
+    </div>
+    <div class="info">
+        <div class="textarea">
+       <!--- {% if messages %}
+        <h1>{{messages}}</h1>
+         {% endif %}-->
+       </div>
+    </div>
+    </div>
+</body>
+{% endblock %}
+
+</html>
