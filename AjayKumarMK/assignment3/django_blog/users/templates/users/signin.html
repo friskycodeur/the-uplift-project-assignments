@@ -1,0 +1,25 @@
+{% extends 'blog/base.html' %}
+{% block title %}Sign In{% endblock title %}
+{% block link %}
+    <li class="nav-item col-6 col-md-auto">
+        <a  class="nav-link" href="{% url 'register' %}"><p>Register</p></a>
+    </li>
+{% endblock link%}
+{% block content %}
+    <div class="new-body">
+        <div class="container">
+            <form action="" class="mb-3" method="POST">
+                {% csrf_token %}
+                <label class="form-label" for="username">Username</label>
+                <input class="form-control" type="text" name="username"><br><br>
+                <label class="form-label" for="password">Password</label>
+                <input class="form-control" type="password" name="password" id=""><br><br>
+                <button type="submit">Sign In</button>
+            </form>
+            {% if context %}
+                <p>{{context}}</p>
+            {% endif %}
+        </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,35 @@
+{% extends 'blog/base.html' %}
+{% block title%}Blog Home{% endblock title %}
+{% block home %}
+
+    <li class="nav-item col-6 col-md-auto"><a class=" nav-link "href="/blogs"><p>Home</p></a></li>
+    <li class="nav-item col-6 col-md-auto"><a class=" nav-link "href="{% url 'blog-create' %}"><p>Create Blog</p></a></li>
+            
+{% endblock home %}
+{% block link %}
+    <li class="nav-item col-6 col-md-auto">
+        <p class="nav-link" style="color: chartreuse;">@{{ username}}</p>
+    </li>
+    <li class="nav-item col-6 col-md-auto">
+        <a  class="nav-link" href="{% url 'logout' %}"><p>Logout</p></a>
+    </li>
+{% endblock link%}
+{% block content %}
+    <div class="new-body">
+        
+        {% for blog in blogs %}
+        <div class="card">
+            <div class="card-header">
+                <p><span id="username">@{{ blog.author }}</span>  on {{ blog.date_posted }}</p>
+            </div>
+            <div class="card-body">
+                <a href="posts/{{blog.id}}">
+                <h5 class="card-title">
+                    {{ blog.title }}
+                </h5>
+            </a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+{% endblock content %}   

@@ -1,0 +1,23 @@
+{% extends 'blog/base.html' %}
+
+{% block title %}Create An Account{% endblock title %}
+{% block link %}
+    <li class="nav-item col-6 col-md-auto">
+        <a  class="nav-link" href="{% url 'signin' %}"><p>Sign In</p></a>
+    </li>
+{% endblock link%}
+{% block content %}
+    <div class="new-body">
+        <div class="container">
+            <form class="mb-3" action="" method="POST">
+                {% csrf_token %}
+                {{form.as_p}}
+                <br>
+                <button type="submit" class="btn btn-success">Register</button>
+            </form>
+            {% if messages %}
+                <p>{{messages}} <a href="{% url 'signin' %}">Sign In</a> </p>
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}

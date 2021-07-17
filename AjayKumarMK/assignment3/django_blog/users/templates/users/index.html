@@ -1,0 +1,20 @@
+{% extends 'blog/base.html' %}
+{% block title%}Blog Home{% endblock title %}
+{% block link %}
+    <li class="nav-item col-6 col-md-auto">
+        <a  class="nav-link" href="{% url 'register' %}"><p>Register</p></a>
+    </li>
+    <li class="nav-item col-6 col-md-auto">
+        <a  class="nav-link" href="{% url 'signin' %}"><p>Sign In</p></a>
+    </li>
+{% endblock link%}
+{% block content %}
+    <div class=" card text-center">
+        <div style="padding: 100px;">
+            <h1 >Welcome to Django Blog!</h1>
+            <p>Sign Up and start Blogging!</p>
+            <a href="{% url 'register' %}" class="btn btn-primary btn-lg">Sign Up</a>
+            <a href="{% url 'signin' %}"><p>Already an User? Sign In </p></a>
+        </div>
+    </div>
+{% endblock content %}   
