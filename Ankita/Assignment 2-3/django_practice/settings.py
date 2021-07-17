@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'wylu$r1asi0_(n3%ma09r_o5&6wuoc@c8jr_kecl008bm=h#16'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
 
 ALLOWED_HOSTS = []
+DEBUG = True
 
 
 # Application definition
@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'authentication',
-    'blog'
+    'blog',
+    'djangoAuth'
 ]
 
 MIDDLEWARE = [

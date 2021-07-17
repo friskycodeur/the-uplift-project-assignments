@@ -81,7 +81,7 @@ body {
   background: red;
   color: #000;
 }
-.delete{
+.change{
   float:right;
 }
   </style> 
@@ -95,11 +95,10 @@ body {
             {% for blog in blogs %}
             <div class="main">
                 {{blog.title}}
-                {{blog.description}}               
-                  <a href="update/{{blog.id}}"> update this blog</a>
-                <div class="delete">
-                  <a href="delete/{{blog.id}}"> delete this blog</a>
-                  <button type="button" class="btn btn-default" onclick="confirmDelete()"> click me </button>
+                {{blog.description}} 
+                <div class="change">       
+                  <a href="update/{{blog.id}}" class="btn btn-default"> Update this blog</a>     
+                  <a class="btn btn-default" onclick="confirmDelete('{{ blog.id }}')"> Delete this blog</a>
                 </div>
             </div>
                 <br>
@@ -112,10 +111,10 @@ body {
 </body>
 
 <script>
-    function confirmDelete(){
-        let result = confirm("are you sure you want to delete?")
+    function confirmDelete(url){
+        let result = confirm("Are you sure you want to delete?")
         if(result)
-            return true;
+            window.location.href = 'delete/'+url;
         else
             return false;
     }

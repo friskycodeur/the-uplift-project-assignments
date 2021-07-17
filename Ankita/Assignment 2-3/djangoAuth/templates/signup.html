@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Sign up</title>
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -47,13 +47,13 @@
     }
     #formFooter {
       background-color: #353434;
-      color:red;
+      color: white;
       border-top: 1px solid #dce8f1;
       padding: 18px;
       text-align: center;
     }
     /* FORM TYPOGRAPHY*/
-    input[type=button], input[type=submit] {
+    input[type=button], input[type=submit], input[type=reset]  {
       background-color: #353434;
       border: none;
       color: #cccccc;
@@ -66,10 +66,10 @@
       border-radius: 5px 5px 5px 5px;
       margin: 5px 20px 40px 20px;
     }
-    input[type=button]:hover, input[type=submit]:hover{
+    input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover  {
       background-color: #5fbae9;
     }
-    input[type=text], input[type=email] {
+    input[type=text] , input[type=email]  {
       background-color: #cccccc;
       border: none;
       padding: 15px 32px;
@@ -94,24 +94,27 @@
     } 
     </style> 
 <body>
-    <div class="wrapper">
+ <div class="wrapper">
         <div id="formContent">
             <div class="container nav-navbar">
-              <h3> Hello, welcome back</h3>
+              <h3>Welcome to my website</h3>
             </div>
-            <form method="POST" >
-            {% csrf_token %}
-            <input type="email" name="email" placeholder="Email-ID">
-            <input type="text" name="password" placeholder="Password">
-            <input type="submit">
-            </form>
-         {% if messages %}
+    <form method="POST" >
+              {% csrf_token %}
+        <input type="email" name="email" placeholder="enter your email">
+        <input type="text" name="password" placeholder="enter your password">
+        <input type="submit">
+        
+    </form>
+    <div style="background-color: blue;">
+        {% if messages %}
         Messages
         
         {{messages}}
         {% endif %}
-            <div id="formFooter">
-                <a class="underlineHover">Don't have account? Signup Here</a>
+    </div>
+      <div id="formFooter">
+                <a class="underlineHover" href="http://127.0.0.1:8000/auth/login/" >Already have account?Login Here</a>
             </div>         
         </div>
     </div>
