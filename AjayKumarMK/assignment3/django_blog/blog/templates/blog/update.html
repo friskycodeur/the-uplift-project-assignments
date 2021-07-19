@@ -1,0 +1,26 @@
+{% extends "blog/base.html" %}
+{% block title%}Update{% endblock title %}
+{% block home %}
+
+    <li class="nav-item col-6 col-md-auto"><a class=" nav-link "href="/blogs"><p>Home</p></a></li>
+            
+{% endblock home %}
+{% block link %}
+    <li class="nav-item col-6 col-md-auto">
+        <p class="nav-link" style="color: chartreuse;">@{{ username}}</p>
+    </li>
+{% endblock link%}
+  {% block content %}
+  <div class="new-body">
+    <div class="container">
+        <form method="POST">
+            {% csrf_token %}
+            <label for="title">Blog Title</label><br>
+            {{form.title }} <br><br>
+            <label for="content">Blog Content</label><br>
+            {{form.content}} <br><br>
+            <button type="submit" class="btn btn-outline-warning">Submit</button>
+        </form>
+    </div>
+  </div>
+  {% endblock content %}

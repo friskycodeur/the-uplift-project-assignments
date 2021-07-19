@@ -1,0 +1,48 @@
+
+.btn {
+    font-weight: 600;
+    color: #ffe484;
+    border-color: #ffe484;
+}
+.bd-light{
+    background-color: #7952b3;
+}
+header{
+    position: fixed;
+    color: white;
+}
+nav p{
+    font-size: x-large;
+    align-items: center;
+    margin-bottom: 10px;
+    color: white;
+}
+ul p{
+    font-size: large;
+    margin-bottom: 0px ;
+}
+.content{
+    padding: 10px;
+}
+.new-body{
+    padding: 20px;
+}
+.card{
+    margin-left: 250px;
+    width: 500px;
+    margin-bottom: 10px;
+}
+.card-header p{
+    margin-bottom: 0px;
+}
+#textt{
+    font-size: x-large;
+}
+.card-post {
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+ }
+#username{
+    font-size: larger;
+}

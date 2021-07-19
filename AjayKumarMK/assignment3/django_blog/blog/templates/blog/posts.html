@@ -1,0 +1,48 @@
+{% extends 'blog/base.html' %}
+{% block title %}
+Blog - Post
+{% endblock title %}
+{% block home %}
+
+    <li class="nav-item col-6 col-md-auto"><a class=" nav-link "href="/blogs"><p>Home</p></a></li>
+            
+{% endblock home %}
+{% block link %}
+    <li class="nav-item col-6 col-md-auto">
+        <p class="nav-link" style="color: chartreuse;">@{{ username}}</p>
+    </li>
+{% endblock link%}
+{% block content%}
+    <div class="new-body">
+        <div class="container">
+            <div class="card-post">
+                <h2 class="card-title">{{ posts.title }}</h2>
+                <div class="card-body">
+                    <p class="card-text" id="textt">{{posts.content}}</p>
+                    <h5>By @{{posts.author}}</h5>
+                    <h6>on {{posts.date_posted}}</h6>
+                    <br>
+                    
+                </div>
+                {% if context %}
+                <br><br>
+                <div>    
+                    <a href="update/{{posts.id}}/" class="btn btn-outline-success">Update</a>
+                    <a href="" id="del" class="btn btn-outline-danger" onclick="confirmDelete()">Delete</a>
+                </div>
+                {% endif %}
+            </div>  
+        </div>
+    </div>
+    <script>
+        function confirmDelete(){
+            let result = confirm("are you sure you want to delete?");
+            if(result){
+                document.getElementById("del").href="delete/{{posts.id}}";
+            }
+            else{
+                document.getElementById("del").href="";
+            }
+        }
+    </script>
+{% endblock %}
