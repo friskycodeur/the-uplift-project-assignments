@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<style>
+    body {
+      font-family: "Poppins", sans-serif;
+      height: 100vh;
+      background-color:#5197d4;
+    }
+    /* STRUCTURE */
+    .container{
+      background-color: #353434;
+      color: white;
+      height: 100%;
+      text-align: center;
+      padding: 2px 2px 2px 2px;
+    }
+    a{
+        color:whitesmoke;
+    }
+    .wrapper {
+      display: flex;
+      align-items: center;
+      flex-direction: column; 
+      justify-content: center;
+      width: 100%;
+      min-height: 100%;
+      padding: 20px;
+    }
+    #formContent {
+      background: rgb(250, 195, 127);
+      padding: 30px;
+      width: 100%;
+      max-width: 550px;
+      position: relative;
+      padding: 0px;
+      box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+      text-align: center;
+    }
+    #formFooter {
+      background-color: #353434;
+      color:red;
+      border-top: 1px solid #dce8f1;
+      padding: 18px;
+      text-align: center;
+    }
+    /* FORM TYPOGRAPHY*/
+    input[type=button], input[type=submit] {
+      background-color: #353434;
+      border: none;
+      color: #cccccc;
+      padding: 15px 80px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      text-transform: uppercase;
+      font-size: 13px;
+      border-radius: 5px 5px 5px 5px;
+      margin: 5px 20px 40px 20px;
+    }
+    input[type=button]:hover, input[type=submit]:hover{
+      background-color: #5fbae9;
+    }
+    input[type=text], input[type=email] {
+      background-color: #cccccc;
+      border: none;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 5px;
+      width: 85%;
+      border: 2px solid #f6f6f6;
+      border-radius: 5px 5px 5px 5px;
+    }
+    input[type=text]:focus {
+      background-color: #fff;
+      border-bottom: 2px solid #5fbae9;
+    }
+    input[type=text]:placeholder {
+      color: #cccccc;
+    }
+    *:focus {
+        outline: none;
+    } 
+    </style> 
+<body>
+    <div class="wrapper">
+        <div id="formContent">
+            <div class="container nav-navbar">
+              <h3> Hello, welcome back</h3>
+            </div>
+            <form method="POST" >
+            {% csrf_token %}
+            <input type="email" name="email" placeholder="Email-ID">
+            <input type="text" name="password" placeholder="Password">
+            <input type="submit">
+            </form>
+         {% if messages %}
+        Messages
+        
+        {{messages}}
+        {% endif %}
+            <div id="formFooter">
+                <a href="http://127.0.0.1:8000/auth/signup/" class="underlineHover">Don't have account? Signup Here</a>
+            </div>         
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogs</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<style>
+body {
+    font-family: "Poppins", sans-serif;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    background-color:#5197d4;
+  }
+  /* STRUCTURE */
+  .container{
+    background-color: #353434;
+    color: white;
+    height: 100%;
+    text-align: center;
+    padding: 2px 2px 2px 2px;
+  }
+  a{
+      color:whitesmoke;
+  }
+  .wrapper {
+    align-items: center;
+    flex-direction: column; 
+    justify-content: center;
+    width: 100%;
+    min-height: 100%;
+    padding: 20px;
+  }
+  #formContent {
+    background: rgb(250, 195, 127);
+    width: auto;
+    max-width: auto;
+    position: relative;
+    box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+    margin-left:95px;
+    margin-right: 95px;
+  }
+  #formFooter {
+    background-color: #353434;
+    color: white;
+    border-top: 1px solid #dce8f1;
+    padding: 18px;
+    width:100%;
+    text-align: center;
+  }
+  a{
+      color:red;
+  } 
+  .main{
+        padding: 15px;
+        background-color:rgb(255, 222, 200);
+  }
+  input[type=button], input[type=submit] {
+    background-color: #353434;
+    border: none;
+    color: #cccccc;
+    padding: 15px 80px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 13px;
+    border-radius: 5px 5px 5px 5px;
+    margin: 5px 20px 40px 20px;
+  }
+  .btn-default {
+  background: rgb(243, 105, 105);
+  color: #fff;
+}
+.btn-default:hover {
+  background: red;
+  color: #000;
+}
+.change{
+  float:right;
+}
+  </style> 
+<body>
+    <div class="wrapper">
+        <div id="formContent">
+          <div class="container nav-navbar navbar-header">
+              <h3>MY BLOGS WEBSITE</h3>
+              <a href="create" style="float:center;"> Create New blog</a>
+          </div>
+            {% for blog in blogs %}
+            <div class="main">
+                {{blog.title}}
+                {{blog.description}} 
+                <div class="change">       
+                  <a href="update/{{blog.id}}" class="btn btn-default"> Update this blog</a>     
+                  <a class="btn btn-default" onclick="confirmDelete('{{ blog.id }}')"> Delete this blog</a>
+                </div>
+            </div>
+                <br>
+                {% endfor %}
+            <div id="formFooter">
+                <a class="underlineHover">Copyright by Uplift Project @2021</a>
+            </div>         
+        </div>
+    </div>
+</body>
+
+<script>
+    function confirmDelete(url){
+        let result = confirm("Are you sure you want to delete?")
+        if(result)
+            window.location.href = 'delete/'+url;
+        else
+            return false;
+    }
+</script>
+</html>
