@@ -1,0 +1,114 @@
+*
+{ padding:0;
+  margin:0;
+  box-sizing:border-box;
+}
+
+.dec
+{ 
+  font-family:Verdana;
+}
+
+.links
+{ margin-left:350px;
+  border-spacing:70px;
+  height:40px;
+  font-size:17px;
+}
+
+.l1:hover
+{ color:orange;
+  background-color:#A9A9A9;
+}
+
+.text
+{ color:white;
+} 
+
+.text:hover
+{ color:#F2BB66;
+  transform:scale(1.1);
+}
+
+.topnav
+{ height:40px;
+  width:100%;
+  margin-top:0;
+  background-color:#373434;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  margin-bottom:5px;
+}
+
+.container
+{ width:60%;
+  margin-left:auto;
+  margin-right:auto;
+  justify-content:center;
+  align-items:center;
+  padding:30px;
+
+}
+
+input[type=submit]
+{ background-color:#A52A2A;
+  margin:4px 2px;
+  padding:9px 18px;
+  color:white;
+}
+
+.cont
+{ 
+  padding:30px;
+  margin-left:500px auto;
+  margin-right:500px auto;
+  margin-top:-55px;
+  display:flex;
+  justify-content:center;
+  margin-bottom:0;
+}
+
+
+.hbox
+{
+  padding:30px;
+  margin-left:500px auto;
+  margin-right:500px auto;
+  display:flex;
+  justify-content:center;
+  
+}
+
+
+.gbox
+{  width:250px;
+   height:150px;
+   background:#ddd;
+   padding:25px;
+   margin-top:50px auto;
+   justify-content:center;
+   text-align:center;
+}
+
+.obox
+{  width:250px;
+   height:150px;
+   background:#F2BB66;
+   padding:25px;
+   margin-top:50px auto;
+   justify-content:center;
+   text-align:center;
+}
+
+.botnav
+{ height:45px;
+  width:100%;
+  margin-top:-30px;
+  background-color:black;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  position:fixed;
+  bottom:0px;
+}

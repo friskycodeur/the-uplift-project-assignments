@@ -1,0 +1,40 @@
+*
+{ padding:0;
+  margin:0;
+  box-sizing:border-box;
+}
+
+.nav
+{ background-color:white;
+  height:80px;
+  width:100%;
+  align-items:center;
+  justify-content:center;
+}
+
+.banner-area
+{ 
+ background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("images.jpg");
+ background-size: 150px;
+  width: 200px;
+  height: 200px;
+ justify-content: center;
+ align-items:center;
+ display:block;
+} 
+
+.options 
+{
+height: 35px;
+text-align:center;
+margin-left:auto;
+margin-right:auto;
+margin-top:auto;
+margin-bottom:auto;
+align-items:center;
+border: none;
+background-color: black;
+color: white;
+font-size: 18px;
+cursor:pointer;
+}
