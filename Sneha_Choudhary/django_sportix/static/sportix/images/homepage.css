@@ -1,0 +1,68 @@
+body {
+    background-image:url("background.jpg"),linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom:80px;
+  }
+
+.info
+{ position: relative;
+  color:white;
+  top:140px;
+  left:290px;
+  width:700px;
+  font-size: 800px;  
+  box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.3);  
+}  
+
+.content
+{ background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+  padding:10px;
+}
+
+.email
+{ 
+    height: 40px;
+    width:400px;
+    background: white;
+    padding:9px;
+}
+
+.subbutton
+{
+    height:40px;
+    width:150px;
+    background:black;
+    color:white;
+    border-radius:5px;
+}
+.subbutton:hover
+{
+    transform:scale(1.1);
+    background: grey;
+    color:black;
+    font-weight: bold;
+}
+
+
+.membership
+{ position: relative;
+    top:200px;
+    left:290px;
+    width:700px;
+
+}
+
+.nav
+{   padding: 10px;
+    color:white;
+    display:flex;
+    font-family: "McLaren", cursive;
+    width:fit-content;
+}
+
+.options
+{   position:relative;
+    left:900px;
+    font-family: Arial, Helvetica, sans-serif;
+}

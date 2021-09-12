@@ -1,0 +1,44 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  {% block title %}
+   <title>Sportix </title>
+   <link rel="icon" href="{% static 'sportix/images/logo.jpg' %}">
+   <link rel="stylesheet" href="{% static 'sportix/images/homepage.css' %}">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  {% endblock %}
+  
+</head>
+
+{% block content %}
+<body>
+    <div class="nav">
+      <h1>Sportix</h1>  
+        <div class="options">
+         <a href="{% url 'login' %}"><button class="subbutton" >Sign In</button></a>
+        </div>
+    </div>    
+
+    <div class="info">
+        <div class="content">
+        <h1>Unlimited access to live tournaments ,chat groups and many more </h1>
+        <h3>Watch anywhere, anytime ! </h3>
+        </div>
+        <div class="content">
+        <h5>Enter your name to get membership !</h5>
+        </div>
+    </div>    
+    <div class="membership">
+        <form method="POST" action="">
+            {% csrf_token %}
+            {{form}}   
+        <button class="subbutton" >Get started</button>
+        </form>
+    </div>
+</body>
+{% endblock %}
+</html>

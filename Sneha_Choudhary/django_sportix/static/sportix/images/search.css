@@ -1,0 +1,49 @@
+.heading
+{
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.note {
+    background: #fff;
+    border-radius: 7px;
+    box-shadow: 0 2px 5px #ccc;
+    padding: 10px;
+    width: 300px;
+    margin: 16px;
+    float: left;
+  }
+
+.search-result .title h3 {
+    margin: 0 0 15px;
+    color: rgb(22, 22, 22);
+    font-size:40px;
+}
+.search-result .title p {
+    font-size: 12px;
+    color: #333;
+}
+.well {
+    border: 0;
+    padding: 20px;
+    min-height: 63px;
+    background: #fff;
+    box-shadow: none;
+    border-radius: 3px;
+    position: relative;
+    max-height: 100000px;
+    border-bottom: 2px solid #ccc;
+    transition: max-height 0.5s ease;
+    -o-transition: max-height 0.5s ease;
+    -ms-transition: max-height 0.5s ease;
+    -moz-transition: max-height 0.5s ease;
+    -webkit-transition: max-height 0.5s ease;
+}
+.form-control {
+    height: 45px;
+    padding: 10px;
+    font-size: 16px;
+    box-shadow: none;
+    border-radius: 0;
+    position: relative;
+}                    

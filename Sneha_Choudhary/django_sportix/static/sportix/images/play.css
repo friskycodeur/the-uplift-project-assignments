@@ -1,0 +1,82 @@
+.chat
+{ position:absolute;
+  top:0;
+  left:70%; 
+ height:500px;
+}
+
+.chat_option
+{ position:absolute;
+   height:200px;
+   width:360px;
+   top:80px;
+   left:40px;
+   box-shadow: 0 0 25px 0 rgba(27, 27, 27, 0.1);
+}
+
+.chat_option h3{
+  text-shadow: 0 0 3px #f88989,0 0 5px #8888f3;
+}
+
+.image
+{ position:relative;
+  height:90px;
+  width:90px;
+  left:150px;
+  top:15px;
+
+}
+
+.controls
+{  height:50px;
+   width:70%;
+   overflow: hidden;
+   align-items: center;
+}
+
+.controls .video_control
+{   margin-top:6px;
+    height:30px;
+    width:60px;
+    background-color: rgb(125, 167, 247);
+    border-radius: 5px;
+    padding : 5px;
+    text-align: center;
+    font-family:"McLaren", cursive ;
+}
+
+#display
+{
+   height:50vh;
+   overflow-x: hidden;
+   padding:10px;
+   background-image:url("bg2.jpg");
+}
+
+.container-darker
+{
+   height:fit-content;
+   background-color: rgb(231, 212, 212);
+   overflow:visible;
+   width:190px;
+   border-radius:5px;
+   padding:5px;
+   margin-bottom: 5px;
+
+}
+
+form input{
+  margin-top: 5px;
+  width:250px;
+  height:15px;
+}
+
+.subbutton
+{
+  background-color: rgb(216, 72, 96);
+  width:90px;
+  height:27px;
+  border-radius: 2px;
+  font-family:"McLaren", cursive ;
+  font-weight: bold;
+}
