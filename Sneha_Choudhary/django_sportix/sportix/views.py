@@ -66,8 +66,9 @@ def sports(request):
        ipl_matches=match.objects.filter(category="IPL")
        mw_matches=match.objects.filter(status="MW") 
        ra_matches=match.objects.filter(status="RA") 
+       tr_matches=match.objects.filter(status="TR") 
        olympics_matches=match.objects.filter(category="OLYMPICS")
-       return render(request,"sports.html",{'user':request.user.username,'ipl_matches':ipl_matches,'mw_matches':mw_matches,'ra_matches':ra_matches,'olympics_matches':olympics_matches})        
+       return render(request,"sports.html",{'user':request.user.username,'ipl_matches':ipl_matches,'tr_matches':tr_matches,'mw_matches':mw_matches,'ra_matches':ra_matches,'olympics_matches':olympics_matches})        
 
 def play(request,id):
     matches=match.objects.filter(id=id).order_by('date')

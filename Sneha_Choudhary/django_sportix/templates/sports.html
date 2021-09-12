@@ -151,6 +151,36 @@
   </tr>
   </table>
   
+  <h2 class="title">TOP RATED</h2>
+
+  <table class="container">
+    <tr>
+      {% for match in tr_matches %}
+      {% if forloop.counter < 5 %}
+    <td>
+    <a href="{{match.id}}">
+      <div class="box">
+      <div class="imgBox">
+        <img class="img" src={{match.picture.url}} />
+        <div class="content">
+          <h4 >{{match.name}}</h4>
+        </div>
+        <div class="play">
+           <img src="{% static 'sportix/images/play.png' %}" />
+        </div>
+      </div>
+      </div>
+    </a>
+  </td>
+  {% endif %}
+    {% endfor %}
+  <td class="more">
+      <a href="{% url 'more' 3 %}">
+      <img src="{% static 'sportix/images/more.png' %}" height="120px" width="120px" />
+      </a>
+  </td>
+  </tr>
+  </table>  
 
 
 </body>
