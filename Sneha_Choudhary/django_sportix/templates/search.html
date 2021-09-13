@@ -1,0 +1,31 @@
+{% extends "index.html" %}
+
+{% load static %} 
+
+{% block title %}
+  <title>Sportix </title>
+  <link rel="stylesheet" href="{% static 'sportix/images/search.css' %}">
+  <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
+{% endblock %}  
+
+{% block content %}
+  <body>
+   <div class="heading">
+    you searched for  {{search}}
+    </div>
+
+    {% for match in matches %}
+      
+     <div class="note">
+        <a href="{{match.id}}">
+            <img class="img-responsive" src={{match.picture.url}} alt="" height="200px" width="280px">
+            <h3>{{match.name}}</h3>
+            <p>{{match.category}}</p>
+            <p>{{match.sport}}</p>       
+        </a>                       
+    </div>
+
+    {% endfor %}
+  </body>
+{% endblock %}
+

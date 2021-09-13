@@ -1,0 +1,188 @@
+{% extends "index.html" %}
+
+{% load static %} 
+
+{% block title %}
+  <title>Sports</title>
+  <link rel="icon" href="{% static 'sportix/images/logo.jpg' %}">
+  <link rel="stylesheet" href="{% static 'sportix/images/sports.css' %}">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+{% endblock %}  
+
+{% block content %}
+
+<body>
+ <div class="nav">
+  <div class="logo">
+    <h1>Sportix</h1>
+  </div>
+  <div class="user">
+     Welcome {{user}}
+  </div>
+    <form method="POST" action="{% url 'sports' %}">
+      {% csrf_token %}
+      <input name="search" class="search" placeholder="Search">
+        <button class="magnify"><img src="{% static 'sportix/images/magnify.jpg' %}" height=100% width=100%></button>
+     </form>
+</div>
+
+<h2 class="title">IPL</h2>
+
+  <table class="container">
+    <tr>
+    {% for match in ipl_matches %}
+    {% if forloop.counter < 5 %}
+    <td>
+    <a href="{{match.id}}">
+      <div class="box">
+      <div class="imgBox">
+        <img class="img" src={{match.picture.url}} />
+        <div class="content">
+          <h4 >{{match.name}}</h4>
+        </div>
+        <div class="play">
+          <img src="{% static 'sportix/images/play.png' %}" />
+       </div>
+      </div>
+      </div>
+    </a>
+  </td>
+  {% endif %}
+  {% endfor %}
+  <td class="more">
+    <a href="{% url 'more' 1 %}">
+    <img src="{% static 'sportix/images/more.png' %}" height="120px" width="120px" />
+    </a>
+  </td>
+  </tr>
+  </table>
+  
+
+  <h2 class="title">OLYMPICS</h2>
+
+  <table class="container">
+    <tr>
+    {% for match in olympics_matches %}
+    {% if forloop.counter < 5 %}
+    <td>
+    <a href="{{match.id}}">
+      <div class="box">
+      <div class="imgBox">
+        <img class="img" src={{match.picture.url}} />
+        <div class="content">
+          <h4 >{{match.name}}</h4>
+        </div>
+        <div class="play">
+           <img src="{% static 'sportix/images/play.png' %}" />
+        </div>
+      </div>
+      </div>
+    </a>
+  </td>
+  {% endif %}
+  {% endfor %}
+  <td class="more">
+    <a href="{% url 'more' 2 %}">
+    <img src="{% static 'sportix/images/more.png' %}" height="120px" width="120px" />
+    </a>
+  </td>
+  </tr>
+  </table>
+  
+  <h2 class="title">RECENTLY ADDED</h2>
+
+  <table class="container">
+    <tr>
+      {% for match in ra_matches %}
+      {% if forloop.counter < 5 %}
+    <td>
+    <a href="{{match.id}}">
+      <div class="box">
+      <div class="imgBox">
+        <img class="img" src={{match.picture.url}} />
+        <div class="content">
+          <h4 >{{match.name}}</h4>
+        </div>
+        <div class="play">
+           <img src="{% static 'sportix/images/play.png' %}" />
+        </div>
+      </div>
+      </div>
+    </a>
+  </td>
+  {% endif %}
+    {% endfor %}
+  <td class="more">
+      <a href="{% url 'more' 3 %}">
+      <img src="{% static 'sportix/images/more.png' %}" height="120px" width="120px" />
+      </a>
+  </td>
+  </tr>
+  </table>
+  
+  <h2 class="title">MOST WATCHED</h2>
+
+  <table class="container">
+    <tr>
+    {% for match in mw_matches %}
+    {% if forloop.counter < 5 %}
+    <td>
+    <a href="{{match.id}}">
+      <div class="box">
+      <div class="imgBox">
+        <img class="img" src={{match.picture.url}} />
+        <div class="content">
+          <h4 >{{match.name}}</h4>
+        </div>
+        <div class="play">
+           <img src="{% static 'sportix/images/play.png' %}" />
+        </div>
+      </div>
+      </div>
+    </a>
+  </td>
+  {% endif %}
+  {% endfor %}
+  <td class="more">
+    <a href="{% url 'more' 4 %}">
+    <img src="{% static 'sportix/images/more.png' %}" height="120px" width="120px" />
+    </a>
+  </td>
+  </tr>
+  </table>
+  
+  <h2 class="title">TOP RATED</h2>
+
+  <table class="container">
+    <tr>
+      {% for match in tr_matches %}
+      {% if forloop.counter < 5 %}
+    <td>
+    <a href="{{match.id}}">
+      <div class="box">
+      <div class="imgBox">
+        <img class="img" src={{match.picture.url}} />
+        <div class="content">
+          <h4 >{{match.name}}</h4>
+        </div>
+        <div class="play">
+           <img src="{% static 'sportix/images/play.png' %}" />
+        </div>
+      </div>
+      </div>
+    </a>
+  </td>
+  {% endif %}
+    {% endfor %}
+  <td class="more">
+      <a href="{% url 'more' 3 %}">
+      <img src="{% static 'sportix/images/more.png' %}" height="120px" width="120px" />
+      </a>
+  </td>
+  </tr>
+  </table>  
+
+
+</body>
+{% endblock %}
+

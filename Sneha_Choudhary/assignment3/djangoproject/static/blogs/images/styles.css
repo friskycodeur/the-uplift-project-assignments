@@ -1,0 +1,165 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  html {
+    font-family: "Montserrat", sans-serif;
+  }
+  body {
+    background-color: #ADD8E6;
+    padding: 0 16px;
+  }
+  
+  .nav
+  { background-color:#ADD8E6;
+    height:80px;
+    width:100%;
+    align-items:center;
+    justify-content:center;
+    display:flex;
+  }
+
+  .topnav
+{
+  background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("images.jpg");
+  overflow:hidden;
+  padding: 5px;
+  height: 90px;
+}
+
+.log
+{ text-decoration: solid;
+  font-family: "Montserrat", sans-serif;
+  margin-right:20px;
+  padding: 2px;
+  display:flex;
+}
+
+.log:hover
+{ transform: scale(1.1);
+  text-decoration: underline white;
+}
+
+.text
+{  font-family: "McLaren", cursive;
+    font-size: 30px;
+    color:#fff;
+    margin:4px;
+}
+
+.tab
+{ height:80px;
+  width:100%;
+}
+
+header
+{
+    background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("images.jpg");
+    background-size: cover;
+    margin: auto -16px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+    display:flex;
+}
+  
+  header h1 {
+    color: #fff;
+    font-family: "McLaren", cursive;
+    font-weight: 200;
+    font-size:100px;
+    padding-top:10px;
+  }
+  
+  footer {
+    position: fixed;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;
+  }
+  
+  footer p {
+    color: black;
+  }
+  .note {
+    background:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url("blogback.jpg");
+    background-size: cover;
+    border-radius: 7px;
+    box-shadow: 0 2px 5px #ccc;
+    width: 1000px;
+    margin-top: 80px;
+    margin-bottom: 80px;;
+    margin-right: auto;
+    margin-left:auto;
+    white-space :pre-wrap;
+    height:fit-content;
+    font-family: "McLaren", cursive;
+  }
+
+.note:hover
+{
+  transform: scale(1.1);
+  background:linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),url("blogback.jpg");
+  box-shadow: 0 2px 5px black;
+}
+
+  .note h1 {
+    font-size: 50px;
+    color:black;
+    padding-top: 0px;
+  }
+  .note p {
+    font-size: 1.1em;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+
+  .title
+  {
+    height:60px;
+    padding-top:0px;
+    margin-top:-86px;
+  }
+
+  .description
+  {
+    height:fit-content;
+    margin-top:-86px;
+    padding:10px;
+    margin-bottom:-86px;
+  }
+
+  .update
+  { margin-top:-83px;
+    height:90px;
+    margin-bottom:-86px;
+    color:black;
+  }
+
+  .black
+  {
+    color:black;
+  }
+
+ .delete
+ { margin-top:-70px;
+   height:90px;
+   margin-bottom:-60px;
+ }
+
+  .subbutton
+  {
+  padding:5px;
+  background-color: #ADD8E6;
+  border-radius:5px;
+  margin:auto;
+  font-size: 15px;
+  font-family: "Montserrat", sans-serif;
+  } 
+
+  .subbutton:hover
+  {  transform:scale(1.3);
+ 
+  } 
+

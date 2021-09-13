@@ -1,0 +1,28 @@
+{% extends "index.html" %}
+
+{% load static %}
+
+{% block title %}
+    <link rel="stylesheet" href="{% static 'sportix/images/password.css' %}">
+    <title>Blogs | Login</title>
+    <link rel="icon" href="{% static 'sportix/images/logo.jpg' %}">
+{% endblock %}
+
+{% block content %}
+<body>
+     <h1>  LOGIN</h1>
+    <div class="box">
+    <div class="login-box">
+    <form method="POST" action="{% url 'login' %}">
+        {% csrf_token %}
+       {{form}}
+       <div align="center">
+        <button  class="subbutton">Submit</button>
+    </div> 
+    </form>
+    </div>
+    </div>
+</body>
+{% endblock %}
+
+</html>

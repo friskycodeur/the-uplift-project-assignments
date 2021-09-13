@@ -1,0 +1,111 @@
+{% extends "index.html" %}
+
+{% load static %} 
+
+{% block title %}
+  <link rel="stylesheet" href="{% static 'sportix/images/play.css' %}">
+  <script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+  <script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+{% endblock %}  
+
+{% block content %}
+
+{% for match in matches %}
+<video id="myVideo" width="70%" height="435"
+src={{match.video.url}}>
+</video>
+<div class="controls">
+    <div align="center">
+    <button class="video_control" onclick="playVid()">Play</button>
+    <button class="video_control" onclick="pauseVid()">Pause </button>
+    </div>
+</div>
+
+{% for Room in room %}
+<div class="chat">
+    <a href="#"><img src="{% static 'sportix/images/chat.png' %}" class="image" align="center"></a>
+    <div class="chat_option">
+    <h3>Watch live matches together with your friends and start to video chat with them! A video clubhouse for you to watch </h3>
+   
+    <div id="display">
+     
+        
+    </div>
+    <script>
+        $(document).ready(function(){
+        setInterval(function(){
+            $.ajax({
+                type: 'GET',
+                url : "{% url 'getMessages' Room.id %}",
+                success: function(response){
+                    console.log(response);
+                    $("#display").empty();
+                    for (var key in response.messages)
+                    {
+                        var temp="<div class='container-darker'><b>"+response.messages[key].user+"</b><p>"+response.messages[key].value+"</p><span class='time-left'>"+response.messages[key].date+"</span></div>";
+                        $("#display").append(temp);
+                    }
+                },
+                error: function(response){
+                    alert('An error occured')
+                }
+            });
+        },1000);
+        })
+        </script>
+{% endfor %}
+
+    <form id="post-form">
+        {% csrf_token %}
+        <input type="hidden" name="username" id="username" value="{{username}}"/>
+        <input type="hidden" name="room_id" id="room_id" value="{{room_details.id}}"/>
+        <input type="text" name="message" id="message" width="100px" />
+        <input type="submit" class="subbutton" value="Send">
+    </form>
+</div>
+
+    </div>
+</div>
+
+<script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+
+<script> 
+    var vid = document.getElementById("myVideo"); 
+                    
+    function playVid() { 
+        vid.play(); 
+    } 
+                    
+    function pauseVid() { 
+        vid.pause(); 
+    } 
+</script>  
+
+{% for Room in room %}
+<script type="text/javascript">
+    $(document).on('submit','#post-form',function(e){
+      e.preventDefault();
+  
+      $.ajax({
+        type:'POST',
+        url:"{% url 'send' Room.id %}",
+        data:{
+            username:$('#username').val(),
+            room_id:$('#room_id').val(),
+            message:$('#message').val(),
+          csrfmiddlewaretoken:$('input[name=csrfmiddlewaretoken]').val(),
+        },
+        success: function(data){
+           //alert(data)
+        }
+      });
+      document.getElementById('message').value = ''
+    });
+  </script>
+{% endfor %}  
+
+{% endfor %}
+{% endblock %}
